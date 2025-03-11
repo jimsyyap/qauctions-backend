@@ -1,0 +1,105 @@
+notes.txt
+
+# ===============================
+# Compiled and System Files
+# ===============================
+# Ignore compiled Go binaries
+*.exe
+*.dll
+*.so
+*.a
+
+# Ignore macOS-specific files
+.DS_Store
+
+# Ignore Windows-specific files
+Thumbs.db
+
+# Ignore Linux-specific files
+*~
+
+# ===============================
+# Go-Specific
+# ===============================
+# Ignore Go build artifacts
+/bin/
+/pkg/
+
+# Ignore Go module cache
+go.sum
+go.mod.lock
+
+# Ignore local development overrides
+replace-in-go.mod
+
+# ===============================
+# Node.js/React-Specific
+# ===============================
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build artifacts
+/dist/
+/build/
+
+# Ignore npm/yarn lockfiles (if not needed)
+# Uncomment if you want to ignore these:
+# package-lock.json
+# yarn.lock
+
+# Ignore environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# ===============================
+# IDE-Specific
+# ===============================
+# Ignore JetBrains IDE files
+.idea/
+*.iml
+
+# Ignore VS Code files
+.vscode/
+*.code-workspace
+
+# Ignore Vim/Neovim swap files
+*.swp
+*.swo
+
+# ===============================
+# Logs and Temporary Files
+# ===============================
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# ===============================
+# CI/CD and Deployment
+# ===============================
+# Ignore deployment credentials
+credentials.json
+service-account-key.json
+
+# Ignore Docker-related files (if applicable)
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# ===============================
+# Database
+# ===============================
+# Ignore local database files
+*.db
+*.sqlite3
+
+# ===============================
+# Miscellaneous
+# ===============================
+# Ignore any other hidden files
+.*
+!.gitignore

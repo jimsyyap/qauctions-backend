@@ -1,11 +1,13 @@
 package main
 
 import (
+    "fmt"
     "github.com/gin-gonic/gin"
     "gorm.io/driver/postgres"
     "gorm.io/gorm"
     "github.com/jimsyyap/backend/internal/config"
     "github.com/jimsyyap/backend/internal/handlers"
+    "github.com/jimsyyap/backend/internal/models"
 )
 
 func main() {

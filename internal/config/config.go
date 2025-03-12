@@ -1,6 +1,8 @@
 package config
 
-import "github.com/spf13/viper"
+import (
+    "os"
+)
 
 type Config struct {
     DBHost     string
@@ -8,20 +10,16 @@ type Config struct {
     DBPassword string
     DBName     string
     DBPort     string
+    JWTSecret  string
 }
 
 func LoadConfig() *Config {
-    viper.SetDefault("DB_HOST", "localhost")
-    viper.SetDefault("DB_USER", "postgres")
-    viper.SetDefault("DB_PASSWORD", "password")
-    viper.SetDefault("DB_NAME", "auctions")
-    viper.SetDefault("DB_PORT", "5432")
-
     return &Config{
-        DBHost:     viper.GetString("DB_HOST"),
-        DBUser:     viper.GetString("DB_USER"),
-        DBPassword: viper.GetString("DB_PASSWORD"),
-        DBName:     viper.GetString("DB_NAME"),
-        DBPort:     viper.GetString("DB_PORT"),
+        DBHost:     os.Getenv("DB_HOST"),
+        DBUser:     os.Getenv("DB_USER"),
+        DBPassword: os.Getenv("DB_PASSWORD"),
+        DBName:     os.Getenv("DB_NAME"),
+        DBPort:     os.Getenv("DB_PORT"),
+        JWTSecret:  os.Getenv("JWT_SECRET"),
     }
 }
